@@ -11,32 +11,27 @@ public class PilaEnteros {
 
 	LinkedList<Integer> pila;
 
-	public PilaEnteros() 
-	{
+	public PilaEnteros(){
 		pila = new LinkedList<Integer>();
 	}
 	
-	public void apilar(Integer elem)
-	{
+	public void apilar(Integer elem){
 		pila.addLast(elem);
 	}
 
-	public Integer desapilar()
-	{
+	public Integer desapilar(){
 		if (esVacia())
 			throw new RuntimeException("La pila esta vacia");
 		return pila.removeLast();
 	}
 	
-	public Integer tope()
-	{
+	public Integer tope(){
 		if (esVacia())
 			throw new RuntimeException("La pila esta vacia");
 		return pila.getLast();
 	}
 	
-	public boolean esVacia()
-	{
+	public boolean esVacia(){
 		return pila.isEmpty();
 	}
 }
